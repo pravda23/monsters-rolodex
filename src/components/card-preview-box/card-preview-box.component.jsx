@@ -1,19 +1,16 @@
-import "./card-preview.styles.css";
+import React from "react";
+import "../../App.css";
 
 const CardPreviewBox = ({ selectedMonsters, onSelect }) => {
-  const selectedMonsterPreviewList = selectedMonsters.map((i) => (
-    <img
-      key={i.id}
-      src={`https://robohash.org/${i.id}?set=set2&size=90x90`}
-      alt={`${i.name}`}
-      onClick={() => onSelect(i.id)}
-    />
-  ));
   return (
-    <div className="card-preview-box">
-      {selectedMonsterPreviewList.map((item) => (
-        <div key={item.key} className="card-container-preview">
-          {item}
+    <div className="card-preview-box fixed-top">
+      {selectedMonsters.map((monster) => (
+        <div key={monster.id} className="card-container-preview">
+          <img
+            src={`https://robohash.org/${monster.id}?set=set2&size=90x90`}
+            alt={`monster ${monster.name}`}
+            onClick={() => onSelect(monster.id)}
+          />
         </div>
       ))}
     </div>

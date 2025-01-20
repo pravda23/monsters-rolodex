@@ -1,8 +1,7 @@
-import React, { useState } from "react";
 import "./card.styles.css";
 
 const Card = ({ monster, onSelect, isSelected }) => {
-  const { id, name, email } = monster;
+  const { name, email } = monster;
 
   const handleSelect = () => {
     onSelect(monster);

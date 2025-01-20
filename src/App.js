@@ -9,18 +9,17 @@ const App = () => {
   const [monsters, setMonsters] = useState([]);
   const [filteredMonsters, setFilteredMonsters] = useState(monsters);
   const [selectedMonsters, setSelectedMonsters] = useState([]);
-  const [monsterTitle, setMonsterTitle] = useState(null);
 
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
     setSearchField(searchFieldString);
   };
 
-  const onSelect = (monster) => {
+  const onSelect = (id) => {
     setSelectedMonsters((prevSelectedMonsters) =>
-      prevSelectedMonsters.includes(monster)
-        ? prevSelectedMonsters.filter((monsterId) => monsterId !== monster.id)
-        : [...prevSelectedMonsters, monster]
+      prevSelectedMonsters.includes(id)
+        ? prevSelectedMonsters.filter((monsterId) => monsterId !== id)
+        : [...prevSelectedMonsters, id]
     );
   };
 
@@ -44,12 +43,12 @@ const App = () => {
 
   return (
     <div className="App">
+      <CardPreviewBox selectedMonsters={selectedMonsters} onSelect={onSelect} />
       <SearchBox
         onChangeHandler={onSearchChange}
         placeholder={"search monsters"}
         className={"monsters-search-box"}
       />
-      <CardPreviewBox selectedMonsters={selectedMonsters} onSelect={onSelect} />
 
       <CardList
         monsters={filteredMonsters}

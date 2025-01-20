@@ -4,7 +4,7 @@
 
 html,
 body {
-  margin: 0;
+  margin: 40px 0 0 0;
   padding: 1rem;
   width: 100%;
   overflow-x: hidden;
@@ -26,4 +26,26 @@ body {
   font-size: 76px;
   color: #0ccac4;
   font-family: "Rubik Gemstones", cursive;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container-preview {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: inline;
+  font-size: 2rem;
+  width: 90px;
+  height: auto;
 }
