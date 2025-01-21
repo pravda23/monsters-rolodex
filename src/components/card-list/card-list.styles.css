@@ -1,15 +1,17 @@
 .card-list {
-  /* width: 70vw; */
-  margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 20px;
+  color: var(--color-text);
 }
 
-.card-list-preview {
-  /* width: 70vw; */
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
+.scrollable-cardlist {
+  height: 100%;
+  overflow-y: hidden;
+  padding: 20px;
+  scrollbar-width: none;
+}
+
+.scrollable-cardlist::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }

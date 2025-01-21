@@ -2,7 +2,7 @@ import "./search-box.styles.css";
 import "../../App.css";
 
 const SearchBox = ({ className, placeholder, onChangeHandler }) => (
-  <div className="fixed-top">
+  <div>
     <input
       className={`search-box ${className}`}
       type="search"

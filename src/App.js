@@ -43,18 +43,32 @@ const App = () => {
 
   return (
     <div className="App">
-      <CardPreviewBox selectedMonsters={selectedMonsters} onSelect={onSelect} />
-      <SearchBox
-        onChangeHandler={onSearchChange}
-        placeholder={"search monsters"}
-        className={"monsters-search-box"}
-      />
+      <div className="top-frame">
+        <CardPreviewBox
+          selectedMonsters={selectedMonsters}
+          onSelect={onSelect}
+        />
 
-      <CardList
-        monsters={filteredMonsters}
-        onSelect={onSelect}
-        selectedMonsters={selectedMonsters}
-      />
+        <SearchBox
+          onChangeHandler={onSearchChange}
+          placeholder={"search monsters"}
+          className={"monsters-search-box"}
+        />
+      </div>
+      <div className="bottom-frame">
+        <div className="scrollable-content">
+          <CardList
+            monsters={filteredMonsters}
+            onSelect={onSelect}
+            selectedMonsters={selectedMonsters}
+          />
+        </div>
+      </div>
+      <footer className="footer">
+        <p>
+          Created by <a href="">me</a>
+        </p>
+      </footer>
     </div>
   );
 };
