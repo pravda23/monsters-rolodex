@@ -30,6 +30,7 @@ const App = () => {
       })
       .then((user) => {
         setMonsters(user);
+        console.log(user);
       });
   }, []);
 

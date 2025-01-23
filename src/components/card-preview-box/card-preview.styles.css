@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 20px;
+  border: 2px var(--color-primary) solid;
 }
 
 @media (max-width: 600px) {
@@ -23,7 +24,8 @@
   align-items: center;
   justify-content: start;
   font-size: 1rem;
-  color: var(--color-primary);
+  color: var(--color-tertiary);
+  font-weight: bold;
   background-color: var(--white);
   border-radius: 3px;
   padding: 0.2rem;
@@ -32,6 +34,7 @@
 
 .image-preview {
   background-color: var(--color-text);
+  border: 1px var(--color-tertiary) solid;
   margin: 0;
   padding: 0.1rem;
   border-radius: 5px;

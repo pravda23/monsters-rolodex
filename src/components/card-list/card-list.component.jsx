@@ -1,12 +1,9 @@
 import { useEffect } from "react";
 import Card from "../card/card.component";
-import CardPreviewBox from "../card-preview-box/card-preview-box.component";
 import "./card-list.styles.css";
 
 const CardList = ({ monsters, onSelect, selectedMonsters }) => {
-  useEffect(() => {
-    console.log(selectedMonsters);
-  }, [selectedMonsters]);
+  useEffect(() => {}, [selectedMonsters]);
 
   return (
     <>

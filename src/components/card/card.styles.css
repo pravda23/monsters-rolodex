@@ -6,7 +6,7 @@
   background-color: var(--color-tertiary);
   border: 1px solid grey;
   border-radius: 5px;
-  padding: 25px;
+  padding: 1rem;
   cursor: pointer;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
@@ -16,7 +16,7 @@
 }
 
 .card-container > img {
-  width: 180px;
+  width: 10rem;
   height: auto;
   flex-shrink: 0;
 }
